@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace Services.Interfaces
 {
-   public interface IEventosServices : IBaseServices<Eventos, EventoDto>
-    {
-
-    }
-       
-
-
+    
+        public interface ITurmaService : IBaseServices<Turma, TurmaDto>
+        {
+        }
+    
 }

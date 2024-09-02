@@ -19,6 +19,6 @@ namespace Entidades
 
         public ICollection<Usuario> Usuarios { get; set; }
         public ICollection<Turma> Turmas { get; set; }
-        public ICollection<Evento> Eventos { get; set; }
+        public ICollection<Eventos> Eventos { get; set; }
     }
 }

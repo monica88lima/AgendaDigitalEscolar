@@ -31,11 +31,12 @@ builder.Services.AddScoped(typeof(IBaseRepositorio<>), typeof(BaseRepositorio<>)
 builder.Services.AddScoped<IEscolasServices, EscolasServices>();
 builder.Services.AddScoped<IComunicadoServices, ComunicadosServices>();
 builder.Services.AddScoped<IResponsavelServices, ResponsavelServices>();
-//builder.Services.AddScoped<IEventoServices, EventoServices>();
-//builder.Services.AddScoped<IProfessorServices, ProfessorServices>();
-//builder.Services.AddScoped<IAlunoServices, AlunoServices>();
+builder.Services.AddScoped<IEventosServices, EventoServices>();
+builder.Services.AddScoped<IProfessorServices, ProfessorServices>();
+builder.Services.AddScoped<IEstudantesServices, EstudantesServices>();
 builder.Services.AddScoped<IAgendaDiariaServices, AgendaDiariaServices>();
-//builder.Services.AddScoped<IAtividadeServices, AtividadeServices>();
+builder.Services.AddScoped<IAtividadeService, AtividadeServices>();
+builder.Services.AddScoped<ITurmaService, TurmaServices>();
 
 
 var app = builder.Build();
