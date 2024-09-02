@@ -1,3 +1,4 @@
+using Entidades;
 using Microsoft.EntityFrameworkCore;
 using Repositorios;
 using Repositorios.Contexto;
@@ -5,7 +6,6 @@ using Repositorios.Interfaces;
 using Services;
 using Services.DTO;
 using Services.Interfaces;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,12 +16,27 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(DtoMappingProfile));
-builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
-builder.Services.AddScoped<IUsuarioServices, UsuarioServices>();
+
 string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
                                              options.UseMySql(mySqlConnection,
                                              ServerVersion.AutoDetect(mySqlConnection)));
+
+
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<IUsuarioServices, UsuarioServices>();
+
+builder.Services.AddScoped(typeof(IBaseRepositorio<>), typeof(BaseRepositorio<>));
+
+builder.Services.AddScoped<IEscolasServices, EscolasServices>();
+builder.Services.AddScoped<IComunicadoServices, ComunicadosServices>();
+builder.Services.AddScoped<IResponsavelServices, ResponsavelServices>();
+//builder.Services.AddScoped<IEventoServices, EventoServices>();
+//builder.Services.AddScoped<IProfessorServices, ProfessorServices>();
+//builder.Services.AddScoped<IAlunoServices, AlunoServices>();
+builder.Services.AddScoped<IAgendaDiariaServices, AgendaDiariaServices>();
+//builder.Services.AddScoped<IAtividadeServices, AtividadeServices>();
+
 
 var app = builder.Build();
 

@@ -1,11 +1,11 @@
-﻿using Repositorios.Contexto;
-using System;
-using Entidades;
+﻿using Entidades;
+using Microsoft.EntityFrameworkCore;
+using Repositorios.Contexto;
 using Repositorios.Interfaces;
 
 namespace Repositorios
 {
-    public class UsuarioRepositorio: IUsuarioRepositorio
+    public class UsuarioRepositorio : IUsuarioRepositorio
     {
         private readonly AppDbContext _context;
         public UsuarioRepositorio(AppDbContext context)
@@ -13,41 +13,62 @@ namespace Repositorios
             _context = context;
         }
 
-        public bool Login(string email, string password)
+        public async Task<bool> Login(string email, string password)
         {
-            return _context.Usuarios.Any(x => x.Email == email && x.Senha == password);
+            return await _context.Usuario.AnyAsync(x => x.Email == email && x.Senha == password);
         }
-        public bool CadastrarUsuario(Usuario usuario)
+        public async Task<bool> CadastrarUsuario(Usuario usuario)
         {
-            _context.Usuarios.Add(usuario);
-            var sucesss = _context.SaveChanges();
+            _context.Usuario.Add(usuario);
+            var sucesss = await _context.SaveChangesAsync();
             return sucesss == 1;
         }
-        public bool ValidarEmailUnico(string email)
+        public async Task<bool> ValidarEmailUnico(string email)
         {
-            return _context.Usuarios.Any(x => x.Email == email);
+            return await _context.Usuario.AnyAsync(x => x.Email == email);
         }
 
-        public bool RedefinirSenha(string email, string password)
+        public async Task<bool> RedefinirSenha(string email, string password)
         {
-            var usuario=  _context.Usuarios.FirstOrDefault(x => x.Email == email);
-            if(usuario == null) return false;
+            var usuario = await _context.Usuario.FirstOrDefaultAsync(x => x.Email == email);
+            if (usuario == null) return false;
 
             usuario.Senha = password;
 
-             _context.Usuarios.Update(usuario);
+            _context.Usuario.Update(usuario);
             var sucess = _context.SaveChanges();
             return sucess == 1;
         }
 
-        public Usuario BuscaUsuarioID(int id)
+        public async Task<Usuario> BuscaUsuarioID(int id)
         {
-            return _context.Usuarios.FirstOrDefault(x => x.UsuarioId == id);
+            return await _context.Usuario.FirstAsync(x => x.UsuarioId == id);
         }
 
-        public Usuario BuscaUsuarioEmail(string email)
+        public async Task<Usuario> BuscaUsuarioEmail(string email)
         {
-            return _context.Usuarios.FirstOrDefault(x => x.Email == email);
+            return await _context.Usuario.FirstOrDefaultAsync(x => x.Email == email);
+        }
+
+        public async Task<IEnumerable<Usuario>> ListarUsuarios()
+        {
+            return await _context.Usuario.ToListAsync();
+        }
+
+        public async Task<bool> AlteraUsuario(Usuario usuario)
+        {
+            _context.Entry(usuario).State = EntityState.Modified;
+            var foiAlterado = await _context.SaveChangesAsync();
+
+            return foiAlterado == 1;
+        }
+
+        public async Task<bool> DeletaUsuario(Usuario usuario)
+        {
+            _context.Entry(usuario).State = EntityState.Deleted;
+            var foiDeletado = await _context.SaveChangesAsync();
+
+            return foiDeletado == 1;
         }
     }
 }

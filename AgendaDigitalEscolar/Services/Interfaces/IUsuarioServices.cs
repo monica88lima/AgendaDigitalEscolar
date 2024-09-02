@@ -1,27 +1,20 @@
-﻿
-using Repositorios.Interfaces;
-using Services.DTO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Services.DTO;
 
 namespace Services.Interfaces
 {
     public interface IUsuarioServices
     {
 
-        bool Login(string email, string password);
+        Task<bool> Login(string email, string password);
+        Task<UsuarioDto> CadastrarUsuario(UsuarioDto usuario);
+        Task<bool> ValidarEmailUnico(string email);
+        Task<bool> AlterarSenha(string email, string senha);
+        Task<UsuarioDto> BuscarUsuarioEmail(string email);
+        Task<IEnumerable<UsuarioDto>> ListarTodosUsuario();
+        Task<UsuarioDto> BuscarUsuarioId(int id);
+        Task<bool> AlteraUsuario(UsuarioDto usuario);
+        Task<bool> DeletaUsuario(int id);
 
 
-        UsuarioDto CadastrarUsuario(UsuarioDto usuario);
-
-
-        bool ValidarEmailUnico(string email);
-
-
-        bool RedefinirSenha(string email, string password);
-      
     }
 }

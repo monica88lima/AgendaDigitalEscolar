@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace Entidades.Enun
 {
-    internal class ERefeicaoStatus
+    public enum ERefeicaoStatus
     {
+
+        [Description("Muito Boa")]
+        MuitoBoa = 1,
+
+        [Description("Boa")]
+        Boa = 2,
+
+        [Description("Não Aceitou")]
+        Ruim = 3
+
+
     }
 }

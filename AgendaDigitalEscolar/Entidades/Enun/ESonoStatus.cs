@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace Entidades.Enun
 {
-    internal class ESonoStatus
+    public enum ESonoStatus
     {
+        [Description("Sim")]
+        sim = 1,
+
+        [Description("Não")]
+        não = 2,
+
+        [Description("Não se aplica")]
+        nenhuma = 3
     }
 }

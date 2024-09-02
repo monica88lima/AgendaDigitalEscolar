@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Entidades
 {
-   public class Atividade:Padrao
+    public class Atividade:Padrao
     {
         [Key]
         public int AtividadeId { get; set; }

@@ -1,26 +1,25 @@
 ﻿using Entidades;
-using Microsoft.EntityFrameworkCore;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repositorios.Interfaces
 {
     public interface IUsuarioRepositorio
     {
-        bool Login(string email, string password);
+        Task<bool> Login(string email, string password);
 
-        bool CadastrarUsuario(Usuario usuario);
+        Task<bool> CadastrarUsuario(Usuario usuario);
 
-        bool ValidarEmailUnico(string email);
+        Task<bool> ValidarEmailUnico(string email);
 
-         bool RedefinirSenha(string email, string password);
-        Usuario BuscaUsuarioEmail(string email);
-        Usuario BuscaUsuarioID(int id);
+        Task<bool> RedefinirSenha(string email, string password);
 
+        Task<Usuario> BuscaUsuarioEmail(string email);
 
+        Task<Usuario> BuscaUsuarioID(int id);
+
+        Task<IEnumerable<Usuario>> ListarUsuarios();
+
+        Task<bool> AlteraUsuario(Usuario usuario);
+
+        Task<bool> DeletaUsuario(Usuario usuario);
     }
 }

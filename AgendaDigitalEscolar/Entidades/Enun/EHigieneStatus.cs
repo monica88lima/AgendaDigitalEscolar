@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace Entidades.Enun
 {
-    internal class EHigieneStatus
+    public enum EHigieneStatus
     {
+
+        [Description("Higienizado")]
+        Higienizado = 1,
+
+        [Description("Não Higienizado")]
+        NHigienizado = 2,
+
+        [Description("Não se Aplica")]
+        Nenhuma = 3
+
+       
+
+        
     }
 }
