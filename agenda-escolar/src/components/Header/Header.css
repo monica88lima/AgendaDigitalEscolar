@@ -7,21 +7,9 @@
 } 
 .content-img {
     display: flex;
-     /* justify-content: center;
-    align-items: center;   */
 } 
 .img{
      width: 50px;
     height: 50px;
     margin-right: 5%;
 } 
-
-  /* @media screen and (max-width: 450px) {
-    .img {
-      width: 257px;
-      height: 162px;
-    }
-    .text {
-      font-size: 20px;
-    }
-  } */

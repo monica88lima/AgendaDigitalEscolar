@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { Children } from 'react'
 import Header from '../../components/Header/Header'
-import { Row } from 'antd'
 
-const PaginaPadrao = () => {
+const PaginaPadrao = ({children}) => {
   return (
     <div>
-        {/* <Row> */}
-            <Header/>
-        {/* </Row> */}
+        <Header/>
+        <div className='children'>
+                {children}
+            </div>
+
     </div>
   )
 }

@@ -45,12 +45,12 @@ const Login = () => {
   return (
     <Row className='row'>
         <Col span={24}>
-        <div className='content-geral'>
-        <div className='content-img'>
-            <img className='img' src="images/tela-login.png" alt="" />
-        </div>
-        <div className='content-login'>
-                    {/* <div className='content'> */}
+            <div className='content-geral'>
+                <div className='content-img'>
+                    <img className='img' src="images/tela-login.png" alt="" />
+                </div>
+                    <div className='content-login'>
+                        {/* <div className='content'> */}
                         <form onSubmit={handleSubmit} className='form'>
                             <div className='content-inputs'>
                                 <label>
@@ -74,7 +74,7 @@ const Login = () => {
                     </div>
                 </div>
                 {/* </div> */}
-                </Col>
+            </Col>
         </Row>
   )
 }
