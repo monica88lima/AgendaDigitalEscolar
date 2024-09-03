@@ -16,9 +16,9 @@ namespace Repositorios.Interfaces
 
         Task<Usuario> BuscaUsuarioID(int id);
 
+        Task<bool> AlteraUsuario(Usuario usuario);
         Task<IEnumerable<Usuario>> ListarUsuarios();
 
-        Task<bool> AlteraUsuario(Usuario usuario);
 
         Task<bool> DeletaUsuario(Usuario usuario);
     }

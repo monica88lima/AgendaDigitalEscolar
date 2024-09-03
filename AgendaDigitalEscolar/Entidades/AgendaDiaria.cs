@@ -30,5 +30,25 @@ namespace Entidades
         public string? Atividades { get; set; }
 
         public bool Lido { get; set; } = false;
+        [NotMapped]
+        public string RefeicaoStatusString
+        {
+            get => RefeicaoStatus.ToString();
+            set => RefeicaoStatus = Enum.Parse<ERefeicaoStatus>(value, true);
+        }
+
+        [NotMapped]
+        public string SonoStatusString
+        {
+            get => SonoStatus.ToString();
+            set => SonoStatus = Enum.Parse<ESonoStatus>(value, true);
+        }
+
+        [NotMapped]
+        public string HigieneStatusString
+        {
+            get => HigieneStatus.ToString();
+            set => HigieneStatus = Enum.Parse<EHigieneStatus>(value, true);
+        }
     }
 }

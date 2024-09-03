@@ -27,5 +27,6 @@ namespace Entidades
         [JsonIgnore]
         public Professor Professor { get; set; }
         public bool Lido { get; set; } = false;
+
     }
 }

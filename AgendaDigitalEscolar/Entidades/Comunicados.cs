@@ -20,6 +20,8 @@ namespace Entidades
         public string AssinaturaCriador { get; set; }
         public string? Observacao { get; set; }
         public bool Lido { get; set; } = false;
-        public ICollection<ComunicadoTurma> ComunicadoTurmas { get; set; }
+
+
+        public ICollection<Comunicado_Turmas>? ComunicadoTurmas { get; set; }
     }
 }

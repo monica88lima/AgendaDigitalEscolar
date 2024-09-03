@@ -34,7 +34,7 @@ namespace Entidades
         [JsonIgnore]
         public ICollection<EventoTurma> EventosTurmas { get; set; }
         [JsonIgnore]
-        public ICollection<ComunicadoTurma> ComunicadoTurmas { get; set; }
+        public ICollection<Comunicado_Turmas> ComunicadoTurmas { get; set; }
         [JsonIgnore]
         public ICollection<Atividade> Atividades { get; set; }
     }

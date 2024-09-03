@@ -29,6 +29,8 @@ builder.Services.AddScoped<IUsuarioServices, UsuarioServices>();
 builder.Services.AddScoped(typeof(IBaseRepositorio<>), typeof(BaseRepositorio<>));
 
 builder.Services.AddScoped<IEscolasServices, EscolasServices>();
+
+builder.Services.AddScoped<IComunicadoTurmaRepositorio, ComunicadoTurmaRepositorio>();
 builder.Services.AddScoped<IComunicadoServices, ComunicadosServices>();
 builder.Services.AddScoped<IResponsavelServices, ResponsavelServices>();
 builder.Services.AddScoped<IEventosServices, EventoServices>();
