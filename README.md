@@ -42,7 +42,7 @@ O Aplicativo Agenda Escolar Digital foi desenvolvido para torna a comunicação 
 
 - **Controle e Transparência:** Nosso aplicativo permite um maior controle sobre o envio e a visualização de mensagens, fornecendo relatórios de visualização que podem ajudar a escola a garantir que os comunicados estejam sendo vistos pelos responsáveis..
 
-- **Tecnologias Utilizadas:** O aplicativo é construído utilizando C#, garantindo eficiência e desempenho. A base de dados é alimentada por MySQL.
+- **Tecnologias Utilizadas:** O aplicativo é construído utilizando C# e React, garantindo eficiência e desempenho. A base de dados é MySQL.
 
 
 ## DoD
@@ -73,7 +73,7 @@ O Aplicativo Agenda Escolar Digital foi desenvolvido para torna a comunicação 
    - [x] Descrição resumida
    
 - Tela Mensagens
-   - [x] Lista de Mensagens separadas por Perfil
+   - [] Lista de Mensagens separadas por Perfil
   
 - Tela Financeiro
    - [x] Listagem com informações dos meses e o status de pagamento
@@ -113,6 +113,10 @@ A licença do projeto é MIT License.
 
 ### Criando Banco de Dados
  ```
+-- Schema AgendaDigital
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
 -- Schema AgendaDigital
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `AgendaDigital` DEFAULT CHARACTER SET utf8 ;
