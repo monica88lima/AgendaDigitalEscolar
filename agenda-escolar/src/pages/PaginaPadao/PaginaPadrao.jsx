@@ -3,12 +3,11 @@ import Header from '../../components/Header/Header'
 
 const PaginaPadrao = ({children}) => {
   return (
-    <div>
+    <div className='container-pagina-padrao'>
         <Header/>
-        <div className='children'>
-                {children}
-            </div>
-
+        <div className='container-children'>
+          {children}
+        </div>
     </div>
   )
 }

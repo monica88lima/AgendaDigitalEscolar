@@ -1,0 +1,39 @@
+/* Fotos.css */
+.container-principal-fotos{
+    height: 100%;
+    min-height: 100vh;
+}
+.container-fotos{
+    width: 80%;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.fotos-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* border: 1px solid #f0f0f0; */
+    /* border-radius: 4px; */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fotos-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .fotos-text {
+    flex: 1;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .fotos-date {
+    font-size: 16px;
+    color: #888;
+  }
+  

@@ -46,8 +46,8 @@ const Login = () => {
     <Row className='row'>
         <Col span={24}>
             <div className='content-geral'>
-                <div className='content-img'>
-                    <img className='img' src="images/tela-login.png" alt="" />
+                <div className='content-img-longin'>
+                    <img className='img-longin' src="images/tela-login.png" alt="" />
                 </div>
                     <div className='content-login'>
                         {/* <div className='content'> */}

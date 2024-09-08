@@ -1,0 +1,24 @@
+.container-principal-atividades{
+    background-color: #F5EDDE;
+    height: 100%;
+    min-height: 100vh;
+    padding-bottom: 20px;
+  }
+  
+  .title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .title {
+    font-size: 2rem; /* Tamanho da fonte do título */
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    color: #494242;
+  }
+  
+  

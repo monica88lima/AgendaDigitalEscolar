@@ -1,0 +1,80 @@
+.container-financeiro {
+    height: 100%;
+    background-color: #F5EDDE;
+    padding-bottom: 20px;
+}
+.financeiro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.financeiro-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.mensalidade-section {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.mensalidade-text {
+    font-weight: bold;
+}
+
+.mensalidade-date {
+    font-style: italic;
+}
+
+.divider {
+    width: 80%;
+    margin: 20px 0;
+}
+
+.mes-status-section {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.mes-text, .status-text {
+    font-weight: bold;
+}
+
+/* Estilos atualizados para alinhar os círculos e textos */
+.mes-status-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 10px 0;
+}
+
+.mes-content, .status-content {
+    display: flex;
+    align-items: center; /* Alinha o círculo e o texto lado a lado */
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px; /* Espaço entre o círculo e o texto */
+}
+
+.mes-info {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 20px; /* Ajuste de espaçamento entre mês e status */
+}
+
+.status-info {
+    font-size: 1rem;
+    font-weight: bold;
+}

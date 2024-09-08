@@ -1,0 +1,74 @@
+.card-evento-container {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 70%;
+    /* max-width: 600px; */
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .evento-texto {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #494242;
+  }
+
+  .evento-data {
+    font-size: 0.9rem;
+    color: #757575;
+  }
+
+  .card-subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .icon-left {
+    font-size: 1.5rem;
+    color: #757575;
+  }
+
+  .evento-hora {
+    font-size: 0.9rem;
+    color: #757575;
+  }
+
+  .card-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .evento-imagem {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  .evento-descricao {
+    font-size: 1rem;
+    color: #494242;
+    flex: 1;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .icon-right {
+    font-size: 1.5rem;
+    color: #757575;
+  }

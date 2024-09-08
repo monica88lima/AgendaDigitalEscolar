@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
-import './Menu.css'
-import CollapsedButton from '../CollapsedButton/CollapsedButton';
+import React from 'react';
+import './Menu.css';
 
 const Menu = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className='content-menu'>
+        <button className="menu-button">
+        <div className="menu-line"></div>
+        <div className="menu-line"></div>
+        <div className="menu-line"></div>
+        </button>
+    </div>
+  );
+};
 
-    return (
-         <div className='content'>
-                <CollapsedButton isOpen={isOpen}  setIsOpen={setIsOpen}/> 
-         </div>       
-    )
-}
-
-export default Menu
+export default Menu;

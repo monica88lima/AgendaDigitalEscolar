@@ -33,10 +33,10 @@ const PaginaIncial = () => {
     }
   ]
   return (
-    <div className='container'>
+    <div className='container-pagina-principal'>
       <PaginaPadrao>
         <div >
-          <div className='info-escola-container'>
+          <div className='container-info-escola-container'>
             {/* <InfoEscola
               nome="Escola Exemplo"
               telefone="(11) 1234-5678"
