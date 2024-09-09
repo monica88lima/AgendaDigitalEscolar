@@ -1,0 +1,29 @@
+.info-escola-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    background-color: #F0ECD4;
+  }
+  
+  .info-escola-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .info-escola-nome {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .info-escola-imagem {
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 70px;
+  }
+  

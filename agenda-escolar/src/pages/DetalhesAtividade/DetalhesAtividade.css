@@ -1,0 +1,65 @@
+.container-principal-detalhes-atividade{
+  height: 100%;
+  min-height: 100vh;
+}
+
+.atividade-title {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.info-section-atividade {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding-bottom: 20px;
+}
+
+.container-data-entrega {
+  flex-grow: 1; 
+  text-align: left;
+}
+
+.label-data-entrega {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container-info-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  text-align: center;
+}
+
+.small-image {
+  width: 24px;
+  height: 24px;
+}
+
+/* Linha horizontal estilizada */
+.line-atividade {
+  border: 0;
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+}
+
+/* Centraliza o texto dentro de um parágrafo */
+.text-atividade {
+  text-align: justify;
+  padding-bottom: 20px;
+}
+
+/* Estilização para o container principal */
+.container-atividade {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.right-aligned-atividade {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+}

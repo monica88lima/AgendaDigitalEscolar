@@ -1,0 +1,33 @@
+.container-principal-detalhes-comunicado {
+  background-color: #F5EDDE;
+  min-height: 100vh;
+  height: 100%
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5EDDE;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  color: #494242;
+}
+
+.images-container {
+  background-color: #F5EDDE;
+  /* padding-top: 40px; */
+  display: flex;
+  justify-content: center;
+}
+
+.small-detalhes-image {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}

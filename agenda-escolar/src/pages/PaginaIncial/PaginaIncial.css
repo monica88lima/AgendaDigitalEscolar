@@ -1,0 +1,30 @@
+.container-pagina-inicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #E1EBDF;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.container-info-escola-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.pagina-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.pagina-principal-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  padding-bottom: 20px;
+}

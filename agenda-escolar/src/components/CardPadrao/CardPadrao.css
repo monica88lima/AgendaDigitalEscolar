@@ -1,0 +1,57 @@
+
+.card-padrao-container {
+    border-radius: 8px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #E1EBDF;
+  }
+  
+  .card-padrao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E1EBDF;
+  }
+  
+  .card-padrao-titulo {
+    font-weight: bold;
+  }
+  
+  .card-padrao-data {
+    font-style: italic;
+    color: #888;
+  }
+  
+  .card-padrao-subtitulo {
+    margin: 10px 0;
+  }
+  
+  /* .card-padrao-descricao {
+    margin-bottom: 15px;
+  } */
+
+  .card-padrao-descricao p {
+    margin-bottom: 15px;
+    /* Define o tamanho máximo do container */
+    max-height: 4.5em; /* Ajuste conforme necessário */
+    /* Não exibir mais do que 2 linhas */
+    overflow: hidden;
+    /* Adicionar reticências */
+    text-overflow: ellipsis;
+    /* Manter o texto em uma única linha */
+    white-space: nowrap;
+  }
+  
+  .card-padrao-icone {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Mídia query para telas com largura menor que 730px */
+@media (max-width: 730px) {
+  .comunicado-container {
+    width: 70%; /* Define o container para ocupar 70% da largura da tela */
+  }
+}

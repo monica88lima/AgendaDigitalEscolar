@@ -1,0 +1,62 @@
+
+.card-mensagem-container {
+    border-radius: 8px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #E1EBDF;
+  }
+  
+  .card-mensagem-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E1EBDF;
+  }
+  
+  .card-mensagem-titulo {
+    font-weight: bold;
+  }
+  
+  .card-mensagem-data {
+    font-style: italic;
+    color: #888;
+  }
+  
+  .card-mensagem-subtitulo {
+    margin: 10px 0;
+  }
+  
+  /* .card-mensagem-descricao {
+    margin-bottom: 15px;
+  } */
+
+  .card-mensagem-descricao p {
+    margin-bottom: 15px;
+    /* Define o tamanho máximo do container */
+    max-height: 4.5em; /* Ajuste conforme necessário */
+    /* Não exibir mais do que 2 linhas */
+    overflow: hidden;
+    /* Adicionar reticências */
+    text-overflow: ellipsis;
+    /* Manter o texto em uma única linha */
+    white-space: nowrap;
+  }
+  
+  .card-mensagem-icone {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .icone-mesage {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Mídia query para telas com largura menor que 730px */
+@media (max-width: 730px) {
+  .comunicado-container {
+    width: 70%; /* Define o container para ocupar 70% da largura da tela */
+  }
+}

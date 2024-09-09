@@ -1,0 +1,53 @@
+
+.card-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .card-foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .card-foto-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .card-foto-button-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px; 
+  }
+  
+  .card-foto button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button-baixar{
+    border: none;
+  }
+  .button-partilhar{
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  .container-baixar{
+    width: 20px;
+    height: 20px;
+  }
+  .container-compartilhar{
+    width: 20px;
+    height: 20px;
+  }

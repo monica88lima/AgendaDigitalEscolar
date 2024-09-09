@@ -1,0 +1,55 @@
+.container-principal-fotos{
+    height: 100%;
+    min-height: 100vh;
+}
+.container-fotos{
+    width: 80%;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fotos-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .fotos-text {
+    flex: 1;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .fotos-date {
+    font-size: 16px;
+    color: #888;
+  }
+  
+  .container-roda-pe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .imagem-container-roda-pe img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .texto-container-roda-pe p {
+    margin-top: 10px; 
+    font-size: 18px; 
+    text-align: center;
+  }
+  
