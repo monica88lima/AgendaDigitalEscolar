@@ -1,118 +1,13 @@
-# Projeto Senac - Agenda Escolar Digital
+-- Script Criação Banco de Dados
+-- Agenda Digital
+-- 
+-- MySQL 
 
-<h1 align="center">:book: Serviço de Agenda Escolar Online :computer:</h1>
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
-## Descrição do Projeto :heavy_check_mark:
-
-Este projeto consiste em uma aplicação desenvolvida em C# e React para gerenciamento escolar, destinada a facilitar a comunicação e a organização entre professores, alunos e responsáveis. 
-A Agenda Digital permite que os usuários realizem atividades como agendar eventos, consultar comunicados, acompanhar o progresso de tarefas e gerenciar informações escolares de forma conveniente.
-O sistema oferece uma interface amigável que visa melhorar a experiência educacional e a colaboração entre todos os envolvidos no ambiente escolar.
-
-### Funcionalidades Principais
-1. **Cadastro de Usuários:** Permitir que novos usuários (professores, alunos e responsáveis) se cadastrem na plataforma, garantindo que todos possam acessar as funcionalidades disponíveis.
-2. **Gerenciamento de Turmas:** Facilitar o cadastro e a gestão de turmas, incluindo informações como ano, grau e professores responsáveis.
-3. **Agendamento de Atividades::** Permitir que os professores agendem atividades, definindo prazos de entrega e materiais necessários.
-4. **Comunicados e Avisos:** Oferecer um sistema para que os professores enviem comunicados e avisos importantes para alunos e responsáveis, com notificações automáticas.
-
-
-### Pré-requisitos
-- Visual Studio instalado
-- Visual Studio Code instalado
-- Node.js
-- Conexão com banco de dados configurada (SQL Server, MySQL, etc.)
-  
-### Tecnologia :computer:
-
-- C#
-- MySQL
-- React
-- [Figma](https://www.figma.com/design/y5QHefUMT6CJC8SrieLqJW/AgendaEscolar?node-id=0-1&node-type=CANVAS&t=jpd28BBVrq9D6AnL-0)
-
-### Recursos :pushpin:
-
-- Visual Studio Code
-- Visual Studio Community 2022
-- Node.js
-
-### Sobre :triangular_flag_on_post:
-
-O Aplicativo Agenda Escolar Digital foi desenvolvido para torna a comunicação entre escola e responsáveis mais rápida, eficiente e acessível, eliminando a necessidade de recados físicos na mochila das crianças.
-
-### Principais Pontos:
-
-- **Controle e Transparência:** Nosso aplicativo permite um maior controle sobre o envio e a visualização de mensagens, fornecendo relatórios de visualização que podem ajudar a escola a garantir que os comunicados estejam sendo vistos pelos responsáveis..
-
-- **Tecnologias Utilizadas:** O aplicativo é construído utilizando C# e React, garantindo eficiência e desempenho. A base de dados é MySQL.
-
-
-## DoD
-
-- Tela de Login
-   - [x] Tela com campos de Email e Senha
-   - [x] Validação de e-mail e Senha
-   - [x] Redefinir Senha
-
-- Tela Comunicados
-   - [x] Componentes com Ícones de pendente ou lido
-   - [x] Lista de comunicados
-   - [x] Botão de confirmação de leitura e mensagem
-   
-- Tela Agenda
-   - [x] Informação de Recado, data e Atividades
-   - [x] Seleção de Refeição - Sono
-   - [x] Botão de confirmação de leitura e mensagem
-
-- Tela Eventos
-   - [x] Componentes com Ícones de pendente ou lido
-   - [x] Lista de Eventos
-   - [x] Descrição do Eventos 
-   
-- Tela Atividades
-   - [x] Componentes com Ícones de pendente ou lido
-   - [x] Lista de Atividades
-   - [x] Descrição resumida
-   
-- Tela Mensagens
-   - [] Lista de Mensagens separadas por Perfil
-  
-- Tela Financeiro
-   - [x] Listagem com informações dos meses e o status de pagamento
-   
-
-  
-  ### Vídeo de Demonstração
-   * :triangular_flag_on_post: Clique na imagem
-    * [![Vídeo de Demonstração]()
-
-## Como Usar :file_folder:
-
-### Instalação e Configuração
-1. Clone o repositório: `git clone []`
-2. Configure a conexão com o banco de dados no arquivo de configuração `appsettings.json`, do *AgendaDigitalEscolar*.
-3. Execute o script SQL fornecido para criar as tabelas necessárias no banco de dados.
-
-### Executando o Projeto
-1. Abra e execute o projeto *AgendaDigitalEscolar* no Visual Studio.
-2. Abra o projeto **, com Visual Studio Code
-3. No Visual Studio Code, clique na aba `Terminal`
-4. Acesse no terminal a pasta **
-5. Execute o comando `npm install`, para baixar as dependencias do projeto
-6. Execute o comando  `npm run star`
-
-### Licença
-A licença do projeto é MIT License.
-
-### Contato
-
-## Perfis no LinkedIn
-
-- [Monica Lima](https://www.linkedin.com/in/monicalima/)
-- [Roberto Pacheco](https://www.linkedin.com/in/roberto-pacheco-527920238/)
-- 
-
-
-### Criando Banco de Dados
- ```
+-- -----------------------------------------------------
 -- Schema AgendaDigital
 -- -----------------------------------------------------
 
@@ -470,14 +365,3 @@ CREATE INDEX `professor_id_idx` ON `AgendaDigital`.`Mensagem` (`professor_id` AS
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-    
-   ```
-
-### Pacotes e Bibliotecas :triangular_flag_on_post:
-
-- .NET 7.0
-- AutoMapper (13.0.1)
-- Pomelo.EntityFrameworkCore.MySql (7.0.0)
-- Microsoft.EntityFrameworkCore.Tools (7.0.2)
-- Microsoft.EntityFrameworkCore.Design (7.0.2)
-
