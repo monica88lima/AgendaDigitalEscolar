@@ -2,7 +2,7 @@ import React from 'react';
 import './CardPadrao.css'; // Importe o arquivo CSS
 import { InfoCircleOutlined } from '@ant-design/icons'; // Exemplo de ícone do Ant Design
 
-const CardPadrao = ({ titulo, data, subtitulo, descricao, lido, observacao,assinaturaCriador, icone
+const CardPadrao = ({ titulo, data, subtitulo, descricao, lido, observacao,assinaturaCriador, icone,
 }) => {
   return (
       <div className="card-padrao-container">

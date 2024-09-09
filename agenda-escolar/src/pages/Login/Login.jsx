@@ -2,6 +2,7 @@ import { Col, Row } from 'antd'
 import React, { useState } from 'react'
 import Button from '../../components/Button/Button';
 import './Login.css';
+import axios from 'axios';
 
 const Login = () => {
 
@@ -13,8 +14,8 @@ const Login = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        /*try {
-            const response = await axios.post(`https://localhost:7297/api/Login?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`);
+        try {
+            const response = await axios.post(`https://localhost:7145/login?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`);
 
             console.log(response.data);
             // Verifique se o acesso foi permitido
@@ -27,11 +28,13 @@ const Login = () => {
                 setSuccessMessage('Login efetuado com sucesso.');
                 setMessageType('success');
                 // Redirecione o usuário para a URL '/'
-                window.location.href = '/';
+                window.location.href = '/home';
             } else {
                 setErrorMessage('Dados inválidos.');
                 setMessageType('error');
             }
+            console.log('#####@ email e senha', email, password)
+            console.log('#####@ response', response)
         } catch (error) {
             console.error('Ocorreu um erro:', error);
             // Se a resposta for um erro 400 (Bad Request), exibe a mensagem de erro
@@ -40,7 +43,7 @@ const Login = () => {
                 setMessageType('error');
             }
         }
-            */
+            
     };
   return (
     <Row className='row'>
@@ -50,7 +53,6 @@ const Login = () => {
                     <img className='img-longin' src="images/tela-login.png" alt="" />
                 </div>
                     <div className='content-login'>
-                        {/* <div className='content'> */}
                         <form onSubmit={handleSubmit} className='form'>
                             <div className='content-inputs'>
                                 <label>

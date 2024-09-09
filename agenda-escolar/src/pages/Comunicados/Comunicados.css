@@ -21,3 +21,12 @@
   color: #494242;
 }
 
+.button-comunicado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  background-color: #F5EDDE;
+}

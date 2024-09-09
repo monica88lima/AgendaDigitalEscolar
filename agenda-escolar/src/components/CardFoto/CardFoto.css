@@ -1,9 +1,9 @@
-/* CardFoto.css */
+
 .card-foto {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Ajuste conforme necessário */
+    width: 100%;
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 8px;
@@ -24,9 +24,9 @@
   }
   
   .card-foto-button-icon {
-    width: 20px; /* Ajuste o tamanho do ícone conforme necessário */
-    height: auto;
-    margin-right: 5px; /* Espaço entre o ícone e o texto */
+    width: 20px;
+    height: 20px;
+    margin-right: 5px; 
   }
   
   .card-foto button {
@@ -36,4 +36,18 @@
   
   .button-baixar{
     border: none;
+  }
+  .button-partilhar{
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  .container-baixar{
+    width: 20px;
+    height: 20px;
+  }
+  .container-compartilhar{
+    width: 20px;
+    height: 20px;
   }

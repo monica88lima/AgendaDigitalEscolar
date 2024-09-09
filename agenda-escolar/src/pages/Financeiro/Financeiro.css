@@ -2,6 +2,7 @@
     height: 100%;
     background-color: #F5EDDE;
     padding-bottom: 20px;
+    min-height: 100vh;
 }
 .financeiro-container {
     display: flex;
@@ -60,10 +61,17 @@
     align-items: center; /* Alinha o círculo e o texto lado a lado */
 }
 
-.circle {
+.circle-pago {
     width: 20px;
     height: 20px;
-    background-color: black;
+    background-color: #99F89F;
+    border-radius: 50%;
+    margin-right: 10px; /* Espaço entre o círculo e o texto */
+}
+.circle-pendente {
+    width: 20px;
+    height: 20px;
+    background-color: #F8E599;
     border-radius: 50%;
     margin-right: 10px; /* Espaço entre o círculo e o texto */
 }

@@ -29,7 +29,6 @@
 
   .card-subheader {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
   }
@@ -39,9 +38,12 @@
     color: #757575;
   }
 
-  .evento-hora {
+  .evento-data2 {
     font-size: 0.9rem;
     color: #757575;
+    color: #494242;
+    flex: 1;
+    
   }
 
   .card-content {

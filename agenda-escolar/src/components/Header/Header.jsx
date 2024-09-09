@@ -5,8 +5,8 @@ import Menu from '../Menu/Menu'
 const Header = ({ imgHeader, altHeader, textHeader }) => {
   return (
     <div className='content'>
-            <Menu/> 
-             <img className='img' src="images/tela-incial.png" alt={altHeader} />
+            <Menu/>
+             <img className='img' src="/images/tela-incial.png" alt={altHeader} />
     </div>
   )
 }

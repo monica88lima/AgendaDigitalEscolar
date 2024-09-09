@@ -1,19 +1,18 @@
 .container-principal-detalhes-comunicado {
   background-color: #F5EDDE;
-  height: 100vh;
-  padding-bottom: 20px;
+  min-height: 100vh;
+  height: 100%
 }
 
 .title-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  background-color: #F5EDDE;
 }
 
 .title {
-  font-size: 2rem; /* Tamanho da fonte do título */
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   margin: 0;
@@ -21,7 +20,8 @@
 }
 
 .images-container {
-  margin-top: 40px;
+  background-color: #F5EDDE;
+  /* padding-top: 40px; */
   display: flex;
   justify-content: center;
 }

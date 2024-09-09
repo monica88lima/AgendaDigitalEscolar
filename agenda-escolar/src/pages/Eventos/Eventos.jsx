@@ -1,73 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PaginaPadrao from '../PaginaPadao/PaginaPadrao'
 import CardEvento from '../../components/CardEvento/CardEvento'
 import './Eventos.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { format, parseISO } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
 const Eventos = () => {
-
-    const eventos = [
-        {
-          titulo: "Reunião de Equipe",
-          dataDaMsg: "05 de Setembro, 2024",
-          horario: "14:00",
-          endereco: "Rua das Flores, 123, São Paulo, SP"
-        },
-        {
-          titulo: "Treinamento de Segurança",
-          dataDaMsg: "06 de Setembro, 2024",
-          horario: "09:00",
-          endereco: "Avenida Paulista, 456, São Paulo, SP"
-        },
-        {
-          titulo: "Workshop de Tecnologia",
-          dataDaMsg: "07 de Setembro, 2024",
-          horario: "10:30",
-          endereco: "Rua Augusta, 789, São Paulo, SP"
-        },
-        {
-          titulo: "Encontro de Networking",
-          dataDaMsg: "08 de Setembro, 2024",
-          horario: "18:00",
-          endereco: "Rua dos Pinheiros, 101, São Paulo, SP"
-        },
-        {
-          titulo: "Palestra Motivacional",
-          dataDaMsg: "09 de Setembro, 2024",
-          horario: "15:00",
-          endereco: "Avenida Faria Lima, 202, São Paulo, SP"
-        },
-        {
-          titulo: "Conferência Anual",
-          dataDaMsg: "10 de Setembro, 2024",
-          horario: "08:00",
-          endereco: "Rua Vergueiro, 303, São Paulo, SP"
-        },
-        {
-          titulo: "Apresentação de Projeto",
-          dataDaMsg: "11 de Setembro, 2024",
-          horario: "11:00",
-          endereco: "Avenida Ibirapuera, 404, São Paulo, SP"
-        },
-        {
-          titulo: "Reunião com Clientes",
-          dataDaMsg: "12 de Setembro, 2024",
-          horario: "16:00",
-          endereco: "Rua da Consolação, 505, São Paulo, SP"
-        },
-        {
-          titulo: "Sessão de Brainstorming",
-          dataDaMsg: "13 de Setembro, 2024",
-          horario: "13:00",
-          endereco: "Rua Bela Cintra, 606, São Paulo, SP"
-        },
-        {
-          titulo: "Seminário de Inovação",
-          dataDaMsg: "14 de Setembro, 2024",
-          horario: "17:00",
-          endereco: "Avenida Rebouças, 707, São Paulo, SP"
-        }
-      ];
+    const [eventos, setEventos] = useState([]);
+    const navigate = useNavigate(); // Hook para redirecionar
+    const fetchEventos = async () => {
+      try {
+        const response = await axios.get('https://localhost:7145/api/Eventos');
+        console.log('###########@ Dados recebidos:', response.data);
+        setEventos(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar os comunicados:', error);
+      }
+    };
+ 
+    useEffect(() => {
+      fetchEventos();
+    }, []);
       
+    const handleEventoClick = (eventoId) => {
+      localStorage.setItem('selectedeventoId', eventoId);
+      navigate(`/detalhes-evento/${eventoId}`);
+    };
+
+    
+    
   return (
     <div className='container-principal-evento'>
         <PaginaPadrao>
@@ -76,7 +39,21 @@ const Eventos = () => {
             </div>
             <div >
                 {eventos.map(evento => (
-                    <CardEvento className='card-evento1'/>
+                  <button
+                    className='button-comunicado' 
+                    onClick={() => handleEventoClick(evento.eventoId)} // Passando o ID ao clicar
+                  >
+                    <CardEvento
+                    titulo={evento.titulo}
+                    data={evento.data}
+                    hora={evento.hora} 
+                    dataEvento={ evento.dataEvento} 
+                    decricao={evento.descricao}	
+                    local={evento.local}
+                    className='card-evento1'
+                    lido={evento.lido}
+                    />
+                  </button>
                 ))}
             </div>
             

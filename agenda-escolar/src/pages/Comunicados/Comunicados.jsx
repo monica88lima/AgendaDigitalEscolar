@@ -1,58 +1,45 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Para redirecionamento
 import PaginaPadrao from '../PaginaPadao/PaginaPadrao';
-import Comunicado from '../../components/CardPadrao/CardPadrao';
-import { BellOutlined, CalendarOutlined, CheckCircleOutlined, ExclamationCircleOutlined, InfoCircleOutlined, LockOutlined, MailOutlined, PhoneOutlined, UserOutlined, WarningOutlined } from '@ant-design/icons';
+import Comunicado from '../../components/CardPadrao/CardPadrao'; // Certifique-se de que o caminho está correto
 import './Comunicados.css';
 import axios from 'axios';
 import { format, parseISO } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
 const Comunicados = () => {
-  // Função para formatar a data
-function formatarData(data) {
-  // Exemplo simples de formatação no formato DD/MM/AAAA
-  const date = new Date(data);
-  const day = String(date.getDate()).padStart(2, '0');
-  const month = String(date.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
-  const year = date.getFullYear();
-  return `${day}/${month}/${year}`;
-}
+  const [comunicados, setComunicados] = useState([]);
+  const navigate = useNavigate(); // Hook para redirecionar
 
-// Criar array de 10 objetos de comunicados
-const comunicados = Array.from({ length: 10 }, (_, index) => ({
-  key: `comunicado-${index + 1}`, // Substitua pelo ID real se disponível
-  titulo: `Título ${index + 1}`,  // Substitua pelo valor real se disponível
-  data: formatarData(new Date()), // Substitua por comunicado.criadoEm
-  subtitulo: `Subtítulo ${index + 1}`, // Substitua pelo valor real se disponível
-  descricao: `Descrição ${index + 1}`, // Substitua pelo valor real se disponível
-  lido: false, // Substitua pelo valor real se disponível
-  icone: true
-}));
-  // const [comunicados, setComunicados] = useState([]);
+  // Função para buscar os comunicados
+  const fetchComunicados = async () => {
+    try {
+      const response = await axios.get('https://localhost:7145/api/Comunicados');
+      console.log('Dados recebidos:', response.data);
+      setComunicados(response.data);
+    } catch (error) {
+      console.error('Erro ao buscar os comunicados:', error);
+    }
+  };
 
-  // const fetchComunicados = async () => {
-  //   try {
-  //     const response = await axios.get('https://localhost:7145/api/Comunicados');
-  //     console.log('###########@ Dados recebidos:', response.data);
-  //     setComunicados(response.data);
-  //   } catch (error) {
-  //     console.error('Erro ao buscar os comunicados:', error);
-  //   }
-  // };
+  useEffect(() => {
+    fetchComunicados();
+  }, []);
 
-  // useEffect(() => {
-  //   fetchComunicados();
-  // }, []);
-
-  // // Função para formatar a data
-  // const formatarData = (data) => {
-  //   try {
-  //     const date = parseISO(data); // Converte a string para um objeto Date
-  //     return format(date, 'dd/MMM', { locale: ptBR }); // Formata a data como "01/Ago"
-  //   } catch (error) {
-  //     return data; // Retorna a data original em caso de erro
-  //   }
-  // };
+  const formatarData = (data) => {
+    try {
+      const date = parseISO(data);
+      return format(date, 'dd/MMM', { locale: ptBR });
+    } catch (error) {
+      return data;
+    }
+  };
+  const handleComunicadoClick = (comunicadoId) => {
+    localStorage.setItem('selectedComunicadoId', comunicadoId);
+    
+    // Redireciona para a página de detalhes
+    navigate(`/detalhes-comunicado/${comunicadoId}`);
+  };
 
   return (
     <div className='container-principal-comunicado'>
@@ -62,6 +49,10 @@ const comunicados = Array.from({ length: 10 }, (_, index) => ({
         </div>
         <div className='comunicado-container2'>
           {comunicados.map((comunicado) => (
+            <button
+              className='button-comunicado' 
+              onClick={() => handleComunicadoClick(comunicado.comunicadoId)} // Passando o ID ao clicar
+            >
             <Comunicado
               key={comunicado.comunicadoId}
               titulo={comunicado.titulo}
@@ -71,6 +62,7 @@ const comunicados = Array.from({ length: 10 }, (_, index) => ({
               lido={comunicado.lido}
               icone={true}
             />
+            </button>
           ))}
         </div>
       </PaginaPadrao>

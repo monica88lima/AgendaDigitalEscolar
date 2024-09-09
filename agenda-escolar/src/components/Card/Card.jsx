@@ -7,7 +7,7 @@ const Card = ({ imgCard, altCard, title }) => {
         <div>
             <CardAntd className="card">
                 <img alt={altCard} src={imgCard} />
-                <p className='title'>{title}</p>
+                <p className='title-card'>{title}</p>
             </CardAntd>
         </div>
     )
