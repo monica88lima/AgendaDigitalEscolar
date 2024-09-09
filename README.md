@@ -81,9 +81,6 @@ O Aplicativo Agenda Escolar Digital foi desenvolvido para torna a comunicação 
 
   
   ### Vídeo de Demonstração 🎦
-https://github.com/monica88lima/AgendaDigitalEscolar/blob/main/VideoDemonstrativo%20%20AgendaDigital.mp4
-    
-
 https://github.com/user-attachments/assets/9349894b-ed99-4583-9c12-3ac1663bdb4c
 
 
