@@ -83,7 +83,7 @@ O Aplicativo Agenda Escolar Digital foi desenvolvido para torna a comunicação 
   ### Vídeo de Demonstração
    * :triangular_flag_on_post: Clique aqui: 
     
-   [![Vídeo de Demonstração](https://img.youtube.com/vi/vwQI9jC3Ft0&t=27s.jpg)](https://www.youtube.com/watch?v=vwQI9jC3Ft0&t=27s)
+   [![Vídeo de Demonstração](https://img.youtube.com/vi/vwQI9jC3Ft0&t.jpg)](https://www.youtube.com/watch?v=vwQI9jC3Ft0&t=27s)
       
 
 ## Como Usar :file_folder:
