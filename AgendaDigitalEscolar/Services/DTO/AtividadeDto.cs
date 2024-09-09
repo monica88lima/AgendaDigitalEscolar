@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Services.DTO
 {
-    public class AtividadeDto: IMapFrom<AgendaDiaria>
+    public class AtividadeDto: IMapFrom<Atividade>
     {
         [Key]
         [Column("atividade_id")]
