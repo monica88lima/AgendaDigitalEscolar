@@ -10,6 +10,7 @@ namespace Services.Interfaces
 {
     public interface IAgendaDiariaServices : IBaseServices<AgendaDiaria, AgendaDiariaDto>
     {
+        Task<bool> MarcarAgendaLidoAsync(int id);
     }
    
 }
