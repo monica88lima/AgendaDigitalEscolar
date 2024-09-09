@@ -82,7 +82,8 @@ O Aplicativo Agenda Escolar Digital foi desenvolvido para torna a comunicação 
   
   ### Vídeo de Demonstração
    * :triangular_flag_on_post: Clique na imagem
-    * [![Vídeo de Demonstração]()
+        * [![Vídeo de Demonstração](https://img.youtube.com/vi/vwQI9jC3Ft0.jpg)](https://youtu.be/vwQI9jC3Ft0)
+      
 
 ## Como Usar :file_folder:
 
@@ -108,7 +109,7 @@ A licença do projeto é MIT License.
 
 - [Monica Lima](https://www.linkedin.com/in/monicalima/)
 - [Roberto Pacheco](https://www.linkedin.com/in/roberto-pacheco-527920238/)
-- 
+- [Cinara Farias](https://www.linkedin.com/in/cinarafarias/)
 
 
 ### Criando Banco de Dados
