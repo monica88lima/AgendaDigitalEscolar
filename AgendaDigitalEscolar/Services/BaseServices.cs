@@ -18,7 +18,9 @@ namespace Services
 
         public async Task<bool> AlterarAsync(int id, Dto dto)
         {
-            var entidade = _mapper.Map<TEntity>(dto);
+            var buscaEntidade = _baseRepositorio.BuscarPorIdAsync(id);
+
+            var entidade = _mapper.Map<TEntity>(buscaEntidade);
             
             return await _baseRepositorio.AlterarAsync(id, entidade);
         }

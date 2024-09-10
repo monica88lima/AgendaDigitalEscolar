@@ -11,5 +11,6 @@ namespace Services.Interfaces
    
     public interface IAtividadeService : IBaseServices<Atividade, AtividadeDto>
     {
+        Task<bool> MarcarAtividadeLidoAsync(int id);
     }
 }

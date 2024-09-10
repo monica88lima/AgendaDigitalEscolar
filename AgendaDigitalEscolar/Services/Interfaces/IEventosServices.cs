@@ -10,9 +10,10 @@ namespace Services.Interfaces
 {
    public interface IEventosServices : IBaseServices<Eventos, EventoDto>
     {
+        Task<bool> MarcarEventoLidoAsync(int id);
+
 
     }
-       
 
 
 }

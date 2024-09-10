@@ -53,6 +53,15 @@ namespace AgendaDigitalEscolar.Controllers
 
         }
 
+        [HttpPut("/marcar_agenda_lido/{id}")]
+        public async Task<IActionResult> MarcarAgendaLido(int id)
+        {
+            if (await _servicesAgendaDiaria.MarcarAgendaLidoAsync(id))
+                return Ok();
+
+            return NotFound();
+
+        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> AlterarAgendaDiaria(AgendaDiariaDto AgendaDiariaDto, int id)

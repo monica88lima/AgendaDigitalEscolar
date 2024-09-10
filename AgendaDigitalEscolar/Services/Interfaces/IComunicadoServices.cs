@@ -8,6 +8,8 @@ namespace Services.Interfaces
         Task<IEnumerable<Comunicados>> BuscarComunicadosPorTurma(int id);
 
         Task<bool> CadastrarComunicadosPorTurma(ComunicadoTurmasDto turmasDto);
+
+        Task<bool> MarcarComunicadoLidoAsync(int comunicadoId);
     }
 }
 

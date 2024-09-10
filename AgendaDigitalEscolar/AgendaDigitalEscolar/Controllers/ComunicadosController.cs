@@ -55,10 +55,20 @@ namespace AgendaDigitalEscolar.Controllers
         }
 
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> AlterarComunicado(ComunicadoDto comunicadoDto, int id)
+        //[HttpPut(Name = "{id}")]
+        //public async Task<IActionResult> AlterarComunicado(ComunicadoDto comunicadoDto, int id)
+        //{
+        //    if (await _servicesComunicado.AlterarAsync(id, comunicadoDto))
+        //        return Ok();
+
+        //    return NotFound();
+
+        //}
+
+        [HttpPut("/marcar_comunicado_lido/{id}")]
+        public async Task<IActionResult> MarcarComunicadoLido(int id)
         {
-            if (await _servicesComunicado.AlterarAsync(id, comunicadoDto))
+            if (await _servicesComunicado.MarcarComunicadoLidoAsync(id))
                 return Ok();
 
             return NotFound();

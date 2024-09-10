@@ -8,9 +8,9 @@ namespace Entidades
         [Key]
         [Column("comunicado_id")]
         public int ComunicadoId { get; set; }
-        [Required]
+        
         public string Descricao { get; set; }
-        [Required]
+        
         public string Titulo { get; set; }
 
         [Column("professor_id")]
